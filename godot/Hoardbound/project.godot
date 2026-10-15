@@ -1,0 +1,31 @@
+; Engine configuration file.
+; Godot 3.6.2 — GDScript only. Open this folder in the editor and press F5.
+
+config_version=4
+
+[application]
+
+config/name="Hoardbound"
+config/description="Idle tower defense. Hold the stolen vault."
+run/main_scene="res://Scenes/Main.tscn"
+
+[autoload]
+
+MonsterDatabase="*res://Autoload/MonsterDatabase.gd"
+EconomyManager="*res://Autoload/EconomyManager.gd"
+SaveManager="*res://Autoload/SaveManager.gd"
+GameManager="*res://Autoload/GameManager.gd"
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+window/dpi/allow_hidpi=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true

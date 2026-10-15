@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #101614;
+  --color-ink-2: #18211e;
+  --color-panel: #24302b;
+  --color-line: #3c4c44;
+  --color-parchment: #f3ead7;
+  --color-parchment-dim: #b7ab96;
+  --color-gold: #e2b356;
+  --color-gold-hot: #f2c56d;
+  --color-gold-deep: #8d6424;
+  --color-ember: #d4653a;
+  --color-moss: #3e8f6e;
+  --font-display: "Cinzel", Palatino, Georgia, serif;
+  --font-sans: "Outfit", "Avenir Next", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-parchment);
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  input[type="range"] {
+    accent-color: var(--color-gold);
+    width: 100%;
+  }
+}
+
+.dock {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.spin-slow {
+  animation: hoard-spin 22s linear infinite;
+}
+
+@keyframes hoard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-slow {
+    animation: none;
+  }
+}

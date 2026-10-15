@@ -1,0 +1,11 @@
+Replace these notes with real art. The game draws ColorRect-style shapes in BattleView.gd.
+
+Suggested swaps:
+- Monster bodies: drop sprites in Assets/monsters/<id>.png and draw them in BattleView._draw_monster.
+- Heroes: Assets/enemies/squire.png, runner.png, knight.png, boss.png.
+- Stair and vault: a portrait background in Assets/bg_stair.png.
+- UI: a Theme resource with Cinzel/Outfit (or any serif + sans) assigned on the root Control.
+- SFX: Assets/sfx/*.ogg, played from GameManager where the "SFX:" comments are.
+- Icons: res://icon.png (optional). The project runs without one.
+
+Do not rename monster ids. MonsterDatabase and saves key off them.

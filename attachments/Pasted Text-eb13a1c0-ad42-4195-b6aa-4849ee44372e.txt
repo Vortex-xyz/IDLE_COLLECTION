@@ -1,0 +1,81 @@
+Build a complete Godot 3.6.2 project (GDScript only, no C#) for an idle Tower Defense + Gacha game heavily inspired by Summoner's Greed.
+
+### Core Concept
+The player is a greedy summoner who stole the king's treasure. Endless waves of heroes try to reach the treasure at the bottom of the screen. The player summons monsters and places them on a 3x3 grid to automatically fight the enemies. Progress continues while offline. The game has strong idle progression, gacha summoning, upgrades, and prestige/rebirth systems.
+
+### Technical Requirements
+- Godot version: exactly 3.6.2
+- Language: pure GDScript (no C#)
+- Target platform: Android (mobile first)
+- Use Godot 3.x node structure and APIs only
+- Project must open cleanly in Godot 3.6.2 without errors
+- Create a proper project structure with folders: Scenes, Scripts, Resources, Assets (placeholders), Autoload, Data
+
+### Required Systems (MVP)
+
+1. **Main Game Scene**
+   - Vertical mobile layout
+   - 3x3 placement grid for monsters
+   - Path for enemies coming from the top toward the treasure at the bottom
+   - Wave system with increasing difficulty
+   - Auto-combat (monsters attack automatically)
+
+2. **Summoning / Gacha System**
+   - Summon portal UI
+   - Different rarities: Common, Rare, Epic, Legendary
+   - Soft currency (orbs/gold) and hard currency (gems)
+   - Summon button that costs currency and gives random monsters
+
+3. **Monster System**
+   - Monster data (name, rarity, base damage, attack speed, special ability placeholder)
+   - Placement on the 3x3 grid
+   - Leveling / upgrading monsters
+   - At least 8–10 different monsters with unique stats
+
+4. **Idle / Offline Progress**
+   - Calculate offline earnings based on time away
+   - Offline reward popup when returning
+   - Ability to double offline rewards with rewarded ad (placeholder)
+
+5. **Economy & Progression**
+   - Soft currency (Gold/Orbs)
+   - Hard currency (Gems)
+   - Wave rewards
+   - Simple upgrade shop (damage multiplier, gold multiplier, etc.)
+   - Prestige / Rebirth system that resets progress for permanent multipliers
+
+6. **Save System**
+   - Save all progress (monsters owned, levels, currencies, highest wave, prestige level)
+   - Use Godot's File + JSON or ConfigFile
+   - Auto-save periodically and on exit
+
+7. **UI**
+   - Main game HUD (currencies, current wave, damage numbers)
+   - Summon screen
+   - Inventory / Monster collection screen
+   - Upgrade / Shop screen
+   - Offline reward popup
+   - Simple settings
+
+8. **Monetization Hooks (placeholders)**
+   - Rewarded ad buttons (double offline gold, free summon, time skip)
+   - IAP placeholders (remove ads, gem packs, permanent multipliers)
+
+### Art & Placeholders
+- Use simple colored rectangles / circles or basic shapes as placeholders for monsters, enemies, and UI
+- Clear comments in code where final art should be replaced
+- Make the visual style easy to replace later
+
+### Code Quality
+- Clean, well-commented GDScript
+- Use Autoloads for GameManager, SaveManager, EconomyManager, MonsterDatabase
+- Signal-based communication where appropriate
+- Easy to expand later
+
+### Deliverables
+- Full project folder ready to open in Godot 3.6.2
+- project.godot file correctly configured
+- All scenes and scripts working together
+- A short README explaining how to run it and what still needs art/polish
+
+Start by creating the project structure and core Autoloads, then implement the systems one by one. Make the game playable from the first playable version (summon → place → fight waves → earn currency → upgrade).
